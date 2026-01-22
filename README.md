@@ -17,13 +17,13 @@ A simple and fast CLI tool to count lines of code in your projects, built with P
 ### Using uv (recommended)
 
 ```bash
-uv pip install cloc
+uv pip install ccloc
 ```
 
 ### Using pip
 
 ```bash
-pip install cloc
+pip install ccloc
 ```
 
 ### From source

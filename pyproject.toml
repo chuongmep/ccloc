@@ -1,5 +1,5 @@
 [project]
-name = "cloc"
+name = "ccloc"
 version = "0.1.0"
 description = "Just Count Total Line Of Code"
 readme = "README.md"
