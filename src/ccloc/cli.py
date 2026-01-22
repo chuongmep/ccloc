@@ -36,19 +36,39 @@ from ccloc.formatter import format_results
 def cli(path: Path, extensions: tuple, exclude: tuple, format: str, recursive: bool) -> None:
     """Count lines of code in a directory or file.
     
-    PATH: Directory or file to analyze (default: current directory)
+    When run without arguments, ccloc analyzes the current directory.
     
-    Examples:
+    \b
+    PATH: Directory or file to analyze (default: current directory '.')
     
-        ccloc .
-        
-        ccloc /path/to/project
-        
-        ccloc --extensions .py --extensions .js
-        
-        ccloc -e .py -e .js -x node_modules -x .venv
-        
-        ccloc --no-recursive
+    \b
+    Basic Usage:
+        ccloc              # Analyze current directory
+        ccloc .            # Analyze current directory (explicit)
+        ccloc ..           # Analyze parent directory
+        ccloc /path/to/dir # Analyze specific directory
+        ccloc file.py      # Analyze single file
+    
+    \b
+    Filter by Extensions:
+        ccloc -e .py -e .js             # Only Python and JavaScript files
+        ccloc --extensions .py          # Only Python files
+    
+    \b
+    Exclude Patterns:
+        ccloc -x node_modules -x dist   # Exclude specific directories
+        ccloc -x .venv -x __pycache__   # Exclude virtual env and cache
+    
+    \b
+    Output Formats:
+        ccloc -f table     # Table format (default)
+        ccloc -f json      # JSON format
+        ccloc -f csv       # CSV format
+    
+    \b
+    Advanced:
+        ccloc --no-recursive            # Don't scan subdirectories
+        ccloc src -e .py -f json        # Combine multiple options
     """
     # Convert extensions to a set for faster lookup
     extensions_set = set(extensions) if extensions else None
