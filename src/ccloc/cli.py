@@ -6,11 +6,11 @@ from ccloc.counter import count_lines
 from ccloc.formatter import format_results
 
 
-@click.command()
+@click.command(no_args_is_help=True)
 @click.argument(
     'path',
     type=click.Path(exists=True, path_type=Path),
-    default='.',
+    required=True,
 )
 @click.option(
     '--extensions', '-e',
@@ -35,36 +35,36 @@ from ccloc.formatter import format_results
 )
 def cli(path: Path, extensions: tuple, exclude: tuple, format: str, recursive: bool) -> None:
     """Count lines of code in a directory or file.
-    
-    When run without arguments, ccloc analyzes the current directory.
-    
+
+    When run without arguments, ccloc shows the usage/help interface.
+
     \b
-    PATH: Directory or file to analyze (default: current directory '.')
-    
+    PATH: Directory or file to analyze (e.g., '.', 'src', 'file.py')
+
     \b
     Basic Usage:
-        ccloc              # Analyze current directory
-        ccloc .            # Analyze current directory (explicit)
+        ccloc --help       # Show help/usage information (default behavior)
+        ccloc .            # Analyze current directory
         ccloc ..           # Analyze parent directory
         ccloc /path/to/dir # Analyze specific directory
         ccloc file.py      # Analyze single file
-    
+
     \b
     Filter by Extensions:
         ccloc -e .py -e .js             # Only Python and JavaScript files
         ccloc --extensions .py          # Only Python files
-    
+
     \b
     Exclude Patterns:
         ccloc -x node_modules -x dist   # Exclude specific directories
         ccloc -x .venv -x __pycache__   # Exclude virtual env and cache
-    
+
     \b
     Output Formats:
         ccloc -f table     # Table format (default)
         ccloc -f json      # JSON format
         ccloc -f csv       # CSV format
-    
+
     \b
     Advanced:
         ccloc --no-recursive            # Don't scan subdirectories

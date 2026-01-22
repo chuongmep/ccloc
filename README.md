@@ -36,7 +36,7 @@ pip install ccloc
 ### From source
 
 ```bash
-git clone https://github.com/yourusername/ccloc.git
+git clone https://github.com/chuongmep/ccloc.git
 cd ccloc
 uv sync
 ```
@@ -45,9 +45,14 @@ uv sync
 
 ### Basic usage
 
-Count lines in the current directory:
+Show usage/help (default when no arguments):
 ```bash
 ccloc
+```
+
+Count lines in the current directory:
+```bash
+ccloc .
 ```
 
 Count lines in a specific directory:
@@ -80,7 +85,7 @@ ccloc -x build -x dist
 
 Table format (default):
 ```bash
-ccloc
+ccloc .
 ```
 
 JSON format:
