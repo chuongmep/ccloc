@@ -1,4 +1,4 @@
-# cloc - Count Lines of Code
+# ccloc - Count Lines of Code
 
 A simple and fast CLI tool to count lines of code in your projects, built with Python and managed by `uv`.
 
@@ -40,52 +40,52 @@ uv sync
 
 Count lines in the current directory:
 ```bash
-cloc
+ccloc
 ```
 
 Count lines in a specific directory:
 ```bash
-cloc /path/to/project
+ccloc /path/to/project
 ```
 
 ### Filter by file extensions
 
 Count only Python files:
 ```bash
-cloc --extensions .py
+ccloc --extensions .py
 # or
-cloc -e .py
+ccloc -e .py
 ```
 
 Count Python and JavaScript files:
 ```bash
-cloc -e .py -e .js -e .ts
+ccloc -e .py -e .js -e .ts
 ```
 
 ### Exclude directories
 
 Exclude specific directories (by default excludes: `.git`, `.venv`, `node_modules`, `__pycache__`):
 ```bash
-cloc -x build -x dist
+ccloc -x build -x dist
 ```
 
 ### Output formats
 
 Table format (default):
 ```bash
-cloc
+ccloc
 ```
 
 JSON format:
 ```bash
-cloc --format json
+ccloc --format json
 # or
-cloc -f json
+ccloc -f json
 ```
 
 CSV format:
 ```bash
-cloc -f csv > output.csv
+ccloc -f csv > output.csv
 ```
 
 ### Recursive scanning
@@ -94,27 +94,27 @@ By default, the tool recursively scans all subdirectories. You can disable this:
 
 ```bash
 # Scan only top-level directory
-cloc --no-recursive
+ccloc --no-recursive
 
 # Scan only top-level Python files
-cloc --no-recursive -e .py
+ccloc --no-recursive -e .py
 ```
 
 ### Combined examples
 
 Count Python and JavaScript files, excluding tests:
 ```bash
-cloc -e .py -e .js -x tests -x __tests__
+ccloc -e .py -e .js -x tests -x __tests__
 ```
 
 Scan only current directory without recursion:
 ```bash
-cloc . --no-recursive
+ccloc . --no-recursive
 ```
 
 Count all code in a project with JSON output:
 ```bash
-cloc /path/to/project -f json
+ccloc /path/to/project -f json
 ```
 
 ## Output
@@ -154,7 +154,7 @@ cd cloc
 uv sync
 
 # Run the tool in development mode
-uv run cloc
+uv run ccloc
 ```
 
 ### Run tests

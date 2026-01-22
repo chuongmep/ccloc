@@ -1,9 +1,9 @@
-"""CLI interface for the cloc tool."""
+"""CLI interface for the ccloc tool."""
 
 import click
 from pathlib import Path
-from cloc.counter import count_lines
-from cloc.formatter import format_results
+from ccloc.counter import count_lines
+from ccloc.formatter import format_results
 
 
 @click.command()
@@ -40,15 +40,15 @@ def cli(path: Path, extensions: tuple, exclude: tuple, format: str, recursive: b
     
     Examples:
     
-        cloc .
+        ccloc .
         
-        cloc /path/to/project
+        ccloc /path/to/project
         
-        cloc --extensions .py --extensions .js
+        ccloc --extensions .py --extensions .js
         
-        cloc -e .py -e .js -x node_modules -x .venv
+        ccloc -e .py -e .js -x node_modules -x .venv
         
-        cloc --no-recursive
+        ccloc --no-recursive
     """
     # Convert extensions to a set for faster lookup
     extensions_set = set(extensions) if extensions else None

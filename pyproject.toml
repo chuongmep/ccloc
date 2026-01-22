@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-cloc = "cloc:main"
+ccloc = "ccloc:main"
 
 [build-system]
 requires = ["hatchling"]

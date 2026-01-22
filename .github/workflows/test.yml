@@ -30,16 +30,16 @@ jobs:
       run: uv sync
     
     - name: Run tests
-      run: uv run cloc --help
+      run: uv run ccloc --help
     
     - name: Test on current directory
-      run: uv run cloc .
+      run: uv run ccloc .
     
     - name: Test with extensions filter
-      run: uv run cloc -e .py -e .yml
+      run: uv run ccloc -e .py -e .yml
     
     - name: Test JSON output
-      run: uv run cloc -f json
+      run: uv run ccloc -f json
     
     - name: Test CSV output
-      run: uv run cloc -f csv
+      run: uv run ccloc -f csv
