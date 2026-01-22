@@ -36,8 +36,8 @@ pip install ccloc
 ### From source
 
 ```bash
-git clone https://github.com/yourusername/cloc.git
-cd cloc
+git clone https://github.com/yourusername/ccloc.git
+cd ccloc
 uv sync
 ```
 
@@ -154,8 +154,8 @@ This project uses [uv](https://github.com/astral-sh/uv) for dependency managemen
 
 ```bash
 # Clone the repository
-git clone https://github.com/chuongmep/cloc.git
-cd cloc
+git clone https://github.com/chuongmep/ccloc.git
+cd ccloc
 
 # Install dependencies
 uv sync
