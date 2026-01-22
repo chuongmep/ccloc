@@ -1,5 +1,12 @@
 # ccloc - Count Lines of Code
 
+[![PyPI version](https://badge.fury.io/py/ccloc.svg)](https://badge.fury.io/py/ccloc)
+[![Python Version](https://img.shields.io/pypi/pyversions/ccloc.svg)](https://pypi.org/project/ccloc/)
+[![Downloads](https://pepy.tech/badge/ccloc)](https://pepy.tech/project/ccloc)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release](https://img.shields.io/github/release/chuongmep/cloc.svg)](https://github.com/chuongmep/cloc/releases/)
+[![Build Status](https://github.com/chuongmep/cloc/workflows/Tests/badge.svg)](https://github.com/chuongmep/cloc/actions)
+
 A simple and fast CLI tool to count lines of code in your projects, built with Python and managed by `uv`.
 
 ## Features
