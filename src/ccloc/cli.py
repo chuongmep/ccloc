@@ -10,7 +10,7 @@ from ccloc.formatter import format_results
 @click.argument(
     'path',
     type=click.Path(exists=True, path_type=Path),
-    required=True,
+    default='.',
 )
 @click.option(
     '--extensions', '-e',
@@ -39,7 +39,7 @@ def cli(path: Path, extensions: tuple, exclude: tuple, format: str, recursive: b
     When run without arguments, ccloc shows the usage/help interface.
 
     \b
-    PATH: Directory or file to analyze (e.g., '.', 'src', 'file.py')
+    PATH: Directory or file to analyze (default: current directory '.')
 
     \b
     Basic Usage:

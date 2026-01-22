@@ -1,6 +1,6 @@
 [project]
 name = "ccloc"
-version = "0.1.5"
+version = "0.1.6"
 description = "Just Count Total Line Of Code"
 readme = "README.md"
 authors = [
